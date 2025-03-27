@@ -29,12 +29,12 @@ header {
   color: white;
   font-size: 1.3rem;
   font-weight: 600;
-  text-wrap: nowrap;
+  white-space: nowrap;
   transition: 0.3s ease-in-out;
 }
 
 .logo:hover {
-  color: scale(1.1);
+  transform: scale(1.1);
 }
 
 .nav-links {
@@ -68,10 +68,10 @@ li a:hover::before {
   padding: 0.8rem 1.5rem;
   border-radius: 3rem;
   font-weight: 500;
-  font-size: 1 rem;
+  font-size: 1rem;
   color: white;
   cursor: pointer;
-  text-wrap: nowrap;
+  white-space: nowrap;
   transition: 0.3s ease-in-out;
   background: linear-gradient(90deg, #ea085a, #daaa06);
   border: none;
@@ -129,7 +129,7 @@ section {
 .info-box h1 {
   font-size: 4rem;
   font-weight: 600;
-  text-wrap: nowrap;
+  white-space: nowrap;
   margin: 0 0 1rem 0;
 }
 
@@ -138,7 +138,7 @@ section {
   background-clip: text;
   color: transparent;
   font-size: 2rem;
-  text-wrap: nowrap;
+  white-space: nowrap;
 }
 
 .btn-group {
@@ -240,4 +240,86 @@ section {
 .grid-card p {
   font-weight: 300;
   opacity: 0.8;
+}
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 2rem;
+}
+
+.project-card {
+  padding: 3rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 1.5rem;
+  border: 2px solid black;
+  border-radius: 3rem;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.project-card:hover {
+  transform: translateY(-10px) scale(1.04);
+  background-color: black;
+  color: white;
+}
+
+.project-card img {
+  width: 100%;
+  height: auto;
+  max-width: 300px;
+  border-radius: 1rem;
+}
+
+.project-card .btn-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.project-card .btn {
+  flex: 1 1 auto;
+  min-width: 150px;
+  max-width: 200px;
+  border-radius: 3rem;
+  padding: 0.5rem 1.5rem;
+  border: 2px solid black;
+  cursor: pointer;
+  font-weight: 500;
+  text-wrap: nowrap;
+  transition: 0.2s ease-in-out;
+  background: white;
+  text-align: center;
+}
+
+.project-card:hover .btn {
+  border: 2px solid white;
+  background-color: black;
+  color: white;
+}
+
+.project-card:hover .btn:hover {
+  border: 2px solid white;
+  background: white;
+  color: black;
+}
+
+.project-card h3 {
+  font-size: 2rem;
+  font-weight: 500;
+  opacity: 0.8;
+}
+
+.project-card h4 {
+  font-size: 1.5rem;
+  font-weight: 300;
+  background: linear-gradient(90deg, #ea085a, #daaa06);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
 }
