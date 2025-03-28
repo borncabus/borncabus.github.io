@@ -1,13 +1,27 @@
+/* Fonte primária */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
   text-decoration: none;
-  scroll-behavior: smooth;
   list-style: none;
+  scroll-behavior: smooth;
 }
 
+/* Classe para labels visualmente ocultos (acessibilidade) */
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+/* Header fixo */
 header {
   position: fixed;
   top: 1rem;
@@ -42,13 +56,14 @@ header {
   gap: 2rem;
 }
 
-li a {
+.nav-links li a {
   position: relative;
   color: white;
   font-weight: 300;
 }
 
-li a::before {
+/* Efeito de sublinhado gradiente ao passar o mouse */
+.nav-links li a::before {
   content: '';
   position: absolute;
   top: 25px;
@@ -60,10 +75,11 @@ li a::before {
   background: linear-gradient(90deg, #ea085a, #daaa06);
 }
 
-li a:hover::before {
+.nav-links li a:hover::before {
   width: 100%;
 }
 
+/* Botão visitar GitHub */
 .visit-btn {
   padding: 0.8rem 1.5rem;
   border-radius: 3rem;
@@ -87,13 +103,14 @@ li a:hover::before {
   display: none;
 }
 
+/* Seções */
 section {
   min-height: 100vh;
   padding: 8rem 12%;
   width: 100%;
-  position: relative;
 }
 
+/* Seção 'about' - Início */
 .about {
   display: flex;
   align-items: center;
@@ -117,7 +134,6 @@ section {
   flex-direction: column;
   text-align: center;
   justify-content: center;
-  gap: 1.5rem;
 }
 
 .info-box h3 {
@@ -141,6 +157,7 @@ section {
   white-space: nowrap;
 }
 
+/* Botões gerais */
 .btn-group {
   display: flex;
   gap: 1rem;
@@ -153,7 +170,6 @@ section {
   border: 2px solid black;
   cursor: pointer;
   font-weight: 500;
-  text-wrap: nowrap;
   transition: 0.2s ease-in-out;
   background: white;
 }
@@ -164,6 +180,7 @@ section {
   color: white;
 }
 
+/* Ícones de redes sociais */
 .socials {
   display: flex;
   gap: 2rem;
@@ -181,6 +198,7 @@ section {
   transform: scale(1.1);
 }
 
+/* Título de Seção */
 .section-title {
   text-align: center;
   font-size: 4rem;
@@ -188,6 +206,7 @@ section {
   margin-bottom: 3rem;
 }
 
+/* Seção 'Sobre' - experience */
 .experience-info {
   display: flex;
   gap: 5rem;
@@ -241,6 +260,8 @@ section {
   font-weight: 300;
   opacity: 0.8;
 }
+
+/* Seção 'Histórico' - project */
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
@@ -290,7 +311,6 @@ section {
   border: 2px solid black;
   cursor: pointer;
   font-weight: 500;
-  text-wrap: nowrap;
   transition: 0.2s ease-in-out;
   background: white;
   text-align: center;
@@ -323,6 +343,36 @@ section {
   background-clip: text;
   color: transparent;
 }
+
+/* Seção 'Habilidades' - skills */
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.skill-card {
+  flex: 0 1 400px;
+  width: 400px;
+  background-color: #fff;
+  border: 2px solid #000;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.skill-card h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.skill-card:hover {
+  background-color: black;
+  color: white;
+}
+
+/* Seção 'Contato' - contact */
 .input-box {
   display: flex;
   flex-direction: column;
@@ -343,24 +393,25 @@ section {
 .input-box input {
   border-radius: 3rem;
   border: 2px solid black;
-  padding: 2rem 8rem;
-  font-size: 3rem;
+  padding: 1rem 3rem;
+  font-size: 1.5rem;
   width: 100%;
 }
 
 .input-box input::placeholder {
   color: black;
-  font-size: 3rem;
+  font-size: 1.5rem;
   font-weight: 300;
 }
 
 .input-box i {
   position: absolute;
-  font-size: 4rem;
-  left: 2rem;
+  font-size: 2rem;
+  left: 1rem;
   color: black;
 }
 
+/* Rodapé */
 footer {
   bottom: 0;
   left: 0;
@@ -370,6 +421,7 @@ footer {
   gap: 1rem;
   align-items: center;
   justify-content: center;
+  padding-bottom: 1rem;
 }
 
 footer ul {
@@ -383,92 +435,113 @@ footer ul li a {
   font-weight: 600;
 }
 
-.copyright {
+footer .copyright {
   font-weight: 300;
   margin-top: 1rem;
-  margin-bottom: 1rem;
   font-size: 1rem;
   text-align: center;
   color: rgba(0, 0, 0, 0.6);
 }
 
-@media(max-width: 1280px){
-  header{
+/* Responsividade */
+@media(max-width: 1280px) {
+  header {
     padding: 1rem 2rem;
     gap: 2rem;
   }
-  .about .about-container{
+  .about .about-container {
     gap: 3rem;
   }
-  .experience-info{
+  .experience-info {
     flex-direction: column;
   }
-  .input-box input{
-    padding: 2rem 5rem;
-    font-size: 2.5rem;
-  }
-  .input input::placeholder{
-    font-size: 2.5rem;
-  }
-  .input-box i{
-    font-size: 2.5rem;
-  }
-  .experience-info img{
-    display: none
+  .experience-info img {
+    display: none;
   }
 }
 
-@media(max-width: 768px){
-  header{
+@media(max-width: 768px) {
+  header {
     gap: 1rem;
     padding: 1rem 1rem;
   }
-  header .logo{
+  header .logo {
     font-size: 1rem;
   }
-  header .visit-btn{
+  header .visit-btn {
     display: none;
   }
-  .about .about-container{
+  .about .about-container {
     flex-direction: column;
   }
-  .input-box input{
-    padding: 1rem 2rem;
-    font-size: 1.8rem;
-  }
-  .input-box input::placeholder{
-    font-size: 1.5rem;
-  }
-  input-box i{
-    display: none;
-  }
-  .grid{
+  .grid {
     grid-template-columns: repeat(1, 1fr);
   }
-  .experience-info image{
-    width: 70vw;
+  .input-box input {
+    padding: 1rem 3rem;
+    font-size: 1rem;
+  }
+  .input-box input::placeholder {
+    font-size: 1rem;
+  }
+  .info-box h3 {
+    font-size: 1.4rem;
+  }
+  .info-box h1 {
+    font-size: 2.5rem;
+  }
+  .info-box span {
+    font-size: 1.6rem;
+  }
+  .skill-card {
+    flex: 1 1 100%;
   }
 }
 
-@media(max-width: 600px){
-  header #menu-icon{
+.progress {
+  background-color: #e0e0e0;
+  border-radius: 10px;
+  overflow: hidden;
+  height: 20px;
+  margin: 10px 0;
+}
+
+.progress-bar {
+  height: 100%;
+  background-color: #4caf50;
+  text-align: right;
+  padding-right: 8px;
+  line-height: 20px;
+  color: white;
+  font-weight: bold;
+  border-radius: 10px 0 0 10px;
+  transition: width 0.6s ease, background-color 0.3s ease, transform 0.3s ease;
+}
+
+.progress-bar:hover {
+  background-color: #45a049;
+  transform: scaleY(1.05);
+}
+
+
+@media(max-width: 650px) {
+  #menu-icon {
     display: block;
   }
-  .nav-links{
+  .nav-links {
     position: absolute;
     top: 100%;
     margin-top: 1rem;
     width: 100%;
     padding: 1rem;
     color: white;
-    display: flex;
+    display: none;
     flex-direction: column;
     text-align: center;
     background: rgba(0, 0, 0, 0.9);
     border-radius: 3rem;
-    display: none;
   }
-  .nav-links li{
+  .nav-links li {
     margin-top: 1.5rem;
     padding: 1rem;
   }
@@ -476,25 +549,26 @@ footer ul li a {
     display: flex;
     flex-direction: column;
   }
-  header{
+  header {
     padding: 1rem 5rem;
     gap: 8rem;
   }
-  header .logo{
+  header .logo {
     font-size: 1.5rem;
   }
   .about-container img {
     width: 80vw;
   }
-  .input-box input{
-    padding: 0.5rem 3rem;
-    width: 80%;
-    font-size: 1.5rem;
-  }
-  .input-box input::placeholder{
-    font-size: 1.5rem;
-  }
-  footer ul{
+  footer ul {
     gap: 1rem;
+  }
+  .info-box h3 {
+    font-size: 1.2rem;
+  }
+  .info-box h1 {
+    font-size: 2rem;
+  }
+  .info-box span {
+    font-size: 1.2rem;
   }
 }

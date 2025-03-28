@@ -1,15 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portfólio | Matheus Cabús</title>
+  
+  <!-- Fonte Poppins -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- CSS Principal -->
   <link rel="stylesheet" href="style.css">
+
+  <!-- Ícones Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
-
 <body>
+
+  <!-- Cabeçalho -->
   <header class="header">
     <a href="#" class="logo"><span>Matheus Cabús</span></a>
     <ul class="nav-links">
@@ -20,146 +28,251 @@
       <li><a href="#contato">Contato</a></li>
     </ul>
 
+    <!-- Ícone de menu (mobile) -->
     <i class="fas fa-bars" id="menu-icon"></i>
     
-    <button class="visit-btn">Visitar GitHub</button>
+    <!-- Botão para GitHub -->
+    <button 
+      class="visit-btn" 
+      onclick="window.open('https://github.com/SEU_USUARIO_GITHUB', '_blank')"
+      aria-label="Visitar o perfil de GitHub de Matheus Cabús">
+      Visitar GitHub
+    </button>
   </header>
 
-  <section id="inicio" class="about">
-    <div class="about-container">
-      <img src="images/matheus.jpg" alt="Matheus Cabús">
-      
-      <div class="info-box">
-        <div class="text">
-          <h3>Olá, eu sou</h3>
-          <h1>Matheus Cabús</h1>
-          <span>Estatística e Ciência de Dados</span><br>
-          <span>Ciência da Computação</span>
+  <!-- Conteúdo Principal -->
+  <main>
+    <!-- Seção Início -->
+    <section id="inicio" class="about">
+      <div class="about-container">
+        <img src="images/matheus.jpg" alt="Matheus Cabús Sorrindo em Fundo Neutro" loading="lazy">
+        
+        <div class="info-box">
+          <div class="text">
+            <h3>Olá, eu sou</h3>
+            <h1>Matheus Cabús</h1>
+            <span>Estatística e Ciência de Dados</span><br>
+            <span style="margin-bottom: 20px; display: inline-block;">Ciência da Computação</span>
+          </div>
+          
+          <div class="btn-group" style="margin-bottom: 20px;">
+            <button class="btn">Currículo</button>
+            <button class="btn">Contato</button>
+          </div>
+          
+          <div class="socials">
+            <a href="#"><i class="fab fa-github"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+          </div>
+          
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção Sobre -->
+    <section id="sobre" class="experience">
+      <h2 class="section-title">Sobre</h2>
+      <div class="experience-info">
+        <div class="grid">
+          <div class="grid-card">
+            <i class="fa-solid fa-chart-line"></i>
+            <span>Estatística e Ciência de Dados</span>
+            <h3>2018 - Atual</h3>
+            <p>Graduando em Estatística e Ciência de Dados na UFPR, no 6º período do curso.</p>
+          </div>
+          <div class="grid-card">
+            <i class="fa-solid fa-code"></i>
+            <span>Ciência da Computação</span>
+            <h3>2021 - Atual</h3>
+            <p>Entusiasta no curso da UFPR, fazendo disciplinas eletivas (já no 4º período).</p>
+          </div>
+          <div class="grid-card">
+            <i class="fa-solid fa-pen-nib"></i>
+            <span>Instituto Lumeeiro</span>
+            <h3>2024 - Atual</h3>
+            <p>Desenvolvedor voluntário e consultor de tecnologia, desenvolvendo aplicações web e mobile.</p>
+          </div>
+          <div class="grid-card">
+            <i class="fa-solid fa-robot"></i>
+            <span>Equipe de Robótica Yapira</span>
+            <h3>2024 - Atual</h3>
+            <p>Desenvolvedor de circuitos eletrônicos e programador de robôs. Estudo algoritmos de controle.</p>
+          </div>
+        </div>
+        <!-- Imagem secundária (caso queira manter) -->
+        <img 
+          src="images/matheus.jpg" 
+          alt="Segunda foto de Matheus Cabús" 
+          loading="lazy">
+      </div>
+    </section>
+
+    <!-- Seção Histórico -->
+    <section id="historico" class="project">
+      <h2 class="section-title">Histórico</h2>
+      <div class="projects-grid">
+        <div class="project-card">
+          <img 
+            src="images/caest.jpeg" 
+            alt="Foto do CAEST: Semana de Integração do Curso de Estatística" 
+            loading="lazy">
+          <h3>CAEST</h3>
+          <h4>2024 - Hoje</h4>
+          <p>Diretor de Representação Estudantil e Coordenador do Comitê de Apoio a Estudos, Pesquisas, Estatística e Software (CAEPES).</p>
+          <div class="btn-group">
+            <div class="btn">Página do Projeto</div>
+            <div class="btn">Repositório</div>
+          </div>
+        </div>
+        <div class="project-card">
+          <img 
+            src="images/yapira.jpg" 
+            alt="Time Yapira competindo na RCX 2024" 
+            loading="lazy">
+          <h3>Yapira</h3>
+          <h4>2024 - Hoje</h4>
+          <p>Atualmente trabalhando em conjunto nos times das categorias Seguidor de Linha e Sumô.</p>
+          <div class="btn-group">
+            <div class="btn">Página do Projeto</div>
+            <div class="btn">Repositório</div>
+          </div>
+        </div>
+        <div class="project-card">
+          <img 
+            src="images/lumeeiro.jpg" 
+            alt="Logotipo do Instituto Lumeeiro" 
+            loading="lazy">
+          <h3>Instituto Lumeeiro</h3>
+          <h4>2024 - Hoje</h4>
+          <p>Desenvolvedor voluntário e consultor de tecnologia, desenvolvendo aplicações web e mobile.</p>
+          <div class="btn-group">
+            <div class="btn">Página do Projeto</div>
+            <div class="btn">Repositório</div>
+          </div>
+        </div>
+        <div class="project-card">
+          <img 
+            src="images/tutoria.jpg" 
+            alt="Momento do projeto Tutoria Entre Pares" 
+            loading="lazy">
+          <h3>Tutoria Entre Pares</h3>
+          <h4>2024</h4>
+          <p>Trabalhei como tutor bolsista, ajudando alunos com dificuldades em Cálculo e Pré-Cálculo. Desenvolvi um site para o projeto.</p>
+          <div class="btn-group">
+            <div class="btn">Página do Projeto</div>
+          </div>
+        </div>
+        <div class="project-card">
+          <img 
+            src="images/dest.png" 
+            alt="Logo do Departamento de Estatística" 
+            loading="lazy">
+          <h3>Monitoria - Estatística</h3>
+          <h4>2019</h4>
+          <p>Monitor de Estatística Básica, ajudando alunos com dificuldades na disciplina.</p>
+          <div class="btn-group">
+            <div class="btn">Página do Projeto</div>
+            <div class="btn">Repositório</div>
+          </div>
+        </div>
+        <div class="project-card">
+          <img 
+            src="images/lea.jpg" 
+            alt="Logo do Laboratório de Estatística Aplicada" 
+            loading="lazy">
+          <h3>Lab. de Estatística Aplicada</h3>
+          <h4>2019</h4>
+          <p>Atuei como estudante bolsista, oferecendo apoio aos professores e alunos do laboratório.</p>
+          <div class="btn-group">
+            <div class="btn">Página do Projeto</div>
+            <div class="btn">Repositório</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção Habilidades (Nova) -->
+    <section id="habilidades" class="skills">
+      <h2 class="section-title">Habilidades</h2>
+      <div class="skills-container">
+        <div class="skill-card">
+          <h3>R</h3>
+          <div class="progress">
+            <div class="progress-bar" style="width: 70%;">
+              <span>Intermediário</span>
+            </div>
+          </div>
+          <p>Experiência com análise de dados e visualização, manipulação de dados e modelagem estatística. Tenho conhecimentos de shiny e ggplot2, e anos de familiaridade com a linguagem. Uso para fazer protótipos de aplicações rapidamente.</p>
+        </div>
+        <div class="skill-card">
+          <h3>C</h3>
+          <div class="progress">
+            <div class="progress-bar" style="width: 60%;">
+              <span>Intermediário</span>
+            </div>
+          </div>
+          <p>Experiência com programação básica, manipulação de dados e algoritmos. Já desenvolvi alguns projetos pessoais e acadêmicos, e é uma das linguagens que estou sempre buscando aprender mais. Montei um projeto de game engine e trabalhei com a linguagem nas disciplinas de Inteligência Artificial e Sistemas de Bancos de Dados.</p>
+      </div>
+      <div class="skill-card">
+        <h3>Python</h3>
+        <div class="progress">
+          <div class="progress-bar" style="width: 50%;">
+            <span>Intermediário</span>
+          </div>
+        </div>
+        <p>Experiência com análise de dados, prototipagem, automação e desenvolvimento Web. Prefiro R, mas não posso dizer que não tenho familiaridade com a linguagem. É ótima para automatizar tarefas e na disciplina de Programação II utilizei para automação do controle de sprites em Allegro.</p>
+      </div>
+      <div class="skill-card">
+        <h3>Algoritmos e Estruturas de Dados</h3>
+        <div class="progress">
+          <div class="progress-bar" style="width: 40%;">
+            <span>Intermediário</span>
+          </div>
+        </div>
+        <p>Experiência com algoritmos básicos, estruturas de dados e programação orientada a objetos.</p>
+      </div>
+      <div class="skill-card">
+        <h3>HTML/CSS</h3>
+        <div class="progress">
+          <div class="progress-bar" style="width: 80%;">
+            <span>Intermediário</span>
+          </div>
+        </div>
+        <p>Tenho experiência com desenvolvimento de páginas web, design responsivo e acessibilidade. Trabalhei um pouco com SCSS e Tailwind, e toda vez que participo de um projeto tenho que criar um site pra ele.</p>
+      </div>
+      <div class="skill-card">
+        <h3>JavaScript</h3>
+        <div class="progress">
+          <div class="progress-bar" style="width: 50%;">
+            <span>Intermediário</span>
+          </div>
+        </div>
+        <p>Experiência com desenvolvimento de aplicações web, manipulação do DOM e eventos. Mas minha experiência é básica.</p>
+      </div>
+    </section>
+
+    <!-- Seção Contato -->
+    <section id="contato" class="contact">
+      <div class="input-box">
+        <h2 class="section-title">Entre em Contato</h2>
+        
+        <!-- Label visualmente oculto para acessibilidade -->
+        <label for="email" class="visually-hidden"></label>
+        <div class="input">
+          <input 
+            type="email" 
+            id="email" 
+            placeholder="Digite seu e-mail..." 
+            aria-label="Campo para inserir e-mail">
+          <i class="fa-solid fa-envelope"></i>
         </div>
         
-        <div class="btn-group">
-          <button class="btn">Currículo</button>
-          <button class="btn">Contato</button>
-        </div>
-        
-        <div class="socials">
-          <a href="#"><i class="fab fa-github"></i></a>
-          <a href="#"><i class="fab fa-instagram"></i></a>
-        </div>
-        
+        <button class="btn" type="button" onclick="alert('Enviado!');">Enviar</button>
       </div>
-    </div>
-  </section>
+    </section>
+  </main>
 
-  <section id="sobre" class="experience">
-    <h2 class="section-title">Sobre</h2>
-    <div class="experience-info">
-      <div class="grid">
-        <div class="grid-card">
-          <i class="fa-solid fa-chart-line"></i>
-          <span>Estatística e Ciência de Dados</span>
-          <h3>2018 - Atual</h3>
-          <p>Graduando em Estatística e Ciência de Dados na UFPR, no 6º período do curso.</p>
-        </div>
-        <div class="grid-card">
-          <i class="fa-solid fa-code"></i>
-          <span>Ciências da Computação</span>
-          <h3>2021 - Atual</h3>
-          <p>Entusiasta no Curso da UFPR, fazendo disciplinas eletivas (já no 4º período).</p>
-        </div>
-        <div class="grid-card">
-          <i class="fa-solid fa-pen-nib"></i>
-          <span>Instituto Lumeeiro</span>
-          <h3>2024 - Atual</h3>
-          <p>Desenvolvedor Voluntário e Consultor de Tecnologia, desenvolvendo aplicações web e mobile.</p>
-        </div>
-        <div class="grid-card">
-          <i class="fa-solid fa-robot"></i>
-          <span>Equipe de Robótica Yapira</span>
-          <h3>2024 - Atual</h3>
-          <p>Desenvolvedor de Circuitos Eletrônicos e Programador de Robôs. Estudo algoritmos de controle.</p>
-        </div>
-      </div>
-      <img src="images/matheus.jpg" alt="">
-    </div>
-  </section>
-
-  <section id="historico" class="project">
-    <h2 class="section-title">Histórico</h2>
-    <div class="projects-grid">
-      <div class="project-card">
-        <img src="images/caest.jpeg" alt="Foto da Semana de Integração do Curso de Estatística">
-        <h3>CAEST</h3>
-        <h4>2024 - Hoje</h4>
-        <p>Diretor de Representação Estudantil e Coordenador do Comitê de Apoio a Estudos, Pesquisas, Estatística e Software (CAEPES).</p>
-        <div class="btn-group">
-          <div class="btn">Página do Projeto</div>
-          <div class="btn">Repositório</div>
-        </div>
-      </div>
-      <div class="project-card">
-        <img src="images/yapira.jpg" alt="Foto do time Yapira na RCX 2024">
-        <h3>Yapira</h3>
-        <h4>2024 - Hoje</h4>
-        <p>Atualmente trabalhando em conjunto nos times das categorias Seguidor de Linha e Sumô</p>
-        <div class="btn-group">
-          <div class="btn">Página do Projeto</div>
-          <div class="btn">Repositório</div>
-        </div>
-      </div>
-      <div class="project-card">
-        <img src="images/lumeeiro.jpg" alt="Foto da Logo do Instituto Lumeeiro">
-        <h3>Instituto Lumeeiro</h3>
-        <h4>2024 - Hoje</h4>
-        <p>Desenvolvedor Voluntário e Consultor de Tecnologia, desenvolvendo aplicações web e mobile.</p>
-        <div class="btn-group">
-          <div class="btn">Página do Projeto</div>
-          <div class="btn">Repositório</div>
-        </div>
-      </div>
-      <div class="project-card">
-        <img src="images/tutoria.jpg" alt="Foto de um momento no Tutoria Entre Pares">
-        <h3>Tutoria Entre Pares</h3>
-        <h4>2024</h4>
-        <p>Trabalhei como tutor bolsista, ajudando alunos com dificuldades em Cálculo e Pré-Cálculo. Desenvolvi um site para o projeto.</p>
-        <div class="btn-group">
-          <div class="btn">Página do Projeto</div>
-        </div>
-      </div>
-      <div class="project-card">
-        <img src="images/dest.png" alt="Logo do Departamento de Estatística">
-        <h3>Monitoria - Estatística</h3>
-        <h4>2019</h4>
-        <p>Monitor de Estatística Básica, ajudando alunos com dificuldades na disciplina.</p>
-        <div class="btn-group">
-          <div class="btn">Página do Projeto</div>
-          <div class="btn">Repositório</div>
-        </div>
-      </div>
-      <div class="project-card">
-        <img src="images/lea.jpg" alt="Logo do Laboratório de Estatística Aplicada">
-        <h3>Lab. de Estatística Aplicada</h3>
-        <h4>2019</h4>
-        <p>Atuei como Estudante bolsista, oferecendo apoio aos professores e alunos do laboratório.</p>
-        <div class="btn-group">
-          <div class="btn">Página do Projeto</div>
-          <div class="btn">Repositório</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="contato" class="contact">
-    <div class="input-box">
-      <h2 class="section-title">Entre em Contato</h2>
-      <div class="input">
-        <input type="text" placeholder="cabus@ufpr.br">
-        <i class="fa-solid fa-envelope"></i>
-      </div>
-      <button class="btn" type="button" onclick="alert('Enviado!');">Enviar</button>
-    </div>
-  </section>
-
+  <!-- Rodapé -->
   <footer class="footer">
     <ul>
       <li>
@@ -179,10 +292,12 @@
       </li>
     </ul>
 
-    <p class="copyright">&copy; 2025 Matheus Cabús. Todos os direitos reservados.</p>
+    <p class="copyright">
+      &copy; 2025 Matheus Cabús. Todos os direitos reservados.
+    </p>
   </footer>
 
+  <!-- Script principal -->
   <script src="script.js"></script>
 </body>
-
 </html>
